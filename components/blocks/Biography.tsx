@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { dict } from '../dict';
+import { NewArticle } from '../features/NewArticle';
 
 const Wrapper = styled.div`
     margin-top: 50px;
@@ -28,10 +30,6 @@ const ArticleTitle = styled.p`
     font-size: 2rem;
     font-family: 'Red Hat Mono', monospace;
     color: darkgray;
-`;
-
-const Article = styled.div`
-    margin: 50px 0;
 `;
 
 const References = styled.div``;
@@ -153,60 +151,36 @@ export const Biography = () => {
         <Title>Resume</Title>
 
         <Bio>
-            <Article>
-                <ArticleTitle>about_me()</ArticleTitle>
+            <NewArticle article_title={dict.biography.about_me.title}>
 
                 <Text>
-                    {
-                        `
-                            Junior+/Middle Front-end developer with a desire to improve, receive new tasks, learn new
-                            technologies, apply new approaches and become a developer with experience. My goal as
-                            Fronte-end developer is to apply my technical skills, utilize my knowledge, get knowledge
-                            from other developers and just do my work by 100%. 
-                            I strive to bring success to the company, learn and educate others, develop IT
-                            solutions and solve problems!
-                        `
-                    }
+                    {dict.biography.about_me.description}
                 </Text>
 
                 <MainMessage>
-                    {
-                        `
-                            I read articles by other developers, attend IT events, 
-                            analyze the code of other developers,
-                            look for only relevant solutions and am always ready to offer my solution. My interest in
-                            creating a project is very helpful in meeting the company's technical requirements. I am a team
-                            player, ready to adapt to changes and big challenges
-                            solver. Having said that, I can assure you that I can be a useful developer for your company
-                        `
-                    }
+                    {dict.biography.about_me.warningMessage}
                 </MainMessage>
-            </Article>
+            </NewArticle>
 
-            <article>
-                <ArticleTitle>references()</ArticleTitle>
+
+            <NewArticle article_title={dict.biography.references.title}>
 
                 <References>
 
                     <ReferencesArticle>
                         <Text>
-                            {
-                                `
-                                    For improving my tech skills I often use CodeWars and try to solve some interesting tasks 
-                                `
-                            }
-
+                            {dict.biography.references.description}
                         </Text>
                         <CodeWarsBlock>
                             <Honor>
                                 <Tip>
-                                    Honor:
+                                    {dict.references.codeWars.points}
                                 </Tip>
                                 {codeWars.honor}
                             </Honor>
                             <Languages>
                                 <Tip>
-                                    Languages that i use:
+                                    {dict.references.codeWars.description}
                                 </Tip>
                                 {
                                     codeWars.languages.map((lang: string, key: number) => <Lang key={key}>{key !== codeWars.languages.length - 1 ? `${lang}, ` : lang}</Lang>)
@@ -218,7 +192,7 @@ export const Biography = () => {
 
                     <ReferencesArticle>
                         <MediumBlock>
-                            When i want to share with my experience and find some interesting information - i use Medium
+                            {dict.references.medium.title}
                         </MediumBlock>
 
                         <MediumArticles>
@@ -236,75 +210,50 @@ export const Biography = () => {
                     </ReferencesArticle>
 
                     <Text>
-                        {
-                            `
-                                Also i often visit some programming meetings, for example:
-                            `
-                        }
-                        <a href='https://www.sgu.ru/news/2021-06-08/podvedeny-itogi-iv-chempionata-molodye-professionaly'>Worldskills(I place)</a>
+                        {dict.biography.meetings.description}
+                        <a href='https://www.sgu.ru/news/2021-06-08/podvedeny-itogi-iv-chempionata-molodye-professionaly'>
+                            {dict.biography.meetings.places.ws}
+                        </a>
 
                     </Text>
 
                 </References>
 
-                <Article>
-                    <ArticleTitle>work_experience()</ArticleTitle>
+                <NewArticle article_title={dict.biography.work_experience.title}>
                     <WorkExperience>
                         <ul>
                             {
-                                [
-                                    "3+ company",
-                                    "5+ offer",
-                                    "1y+ experience",
-                                    "2y+ programming"
-                                ].map((type: string, key: number) => <li key={key}>
+                                dict.work_experience.map((type: string, key: number) => <li key={key}>
                                     {type}
                                 </li>)
                             }
                         </ul>
                     </WorkExperience>
-                </Article>
+                </NewArticle>
 
-                <Article>
-                    <ArticleTitle>technical_skills()</ArticleTitle>
+                <NewArticle article_title={dict.biography.technical_skills.title}>
                     <TechnicaExperience>
                         <ul>
                             {
-                                [
-                                    "React, TS, Next.js, Python, Clojure",
-                                    "MATERIAL UI, ANT-DESIGN and other ui libs",
-                                    "Redux, Mobx, Recoil and other sm",
-                                    "CSS Preprocessors, PostCSS",
-                                    "Architectural patterns",
-                                    "Webpack",
-                                    "Git / Github / Bitbucket / Gitlab",
-                                    "Responsive Design, Cross-Browser Development",
-                                    "Smart approach to layout / Standarts, Screen Reader and etc",
-                                    "CSR, SSR, SSG, WPA. "
-                                ].map((type: string, key: number) => <li key={key}>
+                                dict.technica_experience.map((type: string, key: number) => <li key={key}>
                                     {type}
                                 </li>)
                             }
                         </ul>
                     </TechnicaExperience>
-                </Article>
+                </NewArticle>
 
-                <Article>
-                    <ArticleTitle>contact_with_me()</ArticleTitle>
+                <NewArticle article_title={dict.biography.contact_with_me.title}>
                     <Socials>
                         {
-                            [
-                                { text: "Telegram", link: "" },
-                                { text: "CodeWars", link: "" },
-                                { text: "Medium", link: "" },
-                            ].map((social : { text: string, link: string }, key: number) => <Social key={key}>
+                            dict.socials.map((social: { text: string, link: string }, key: number) => <Social key={key}>
                                 {social.text}
                             </Social>)
                         }
                     </Socials>
-                </Article>
+                </NewArticle>
 
-            </article>
+            </NewArticle>
         </Bio>
     </Wrapper>
 }
