@@ -26,7 +26,7 @@ export const dict = {
         },
 
         meetings: {
-            description: 'Also i often visit some programming meetings, for example:',
+            description: 'I often visit some programming meetings, for example:',
             places: {
                 ws: 'Worldskills(I place)'
             }
@@ -59,8 +59,8 @@ export const dict = {
 
     work_experience: [
         "3+ company",
-        "5+ offer",
-        "1y+ experience",
+        "5+ offers",
+        "1y+ work experience",
         "2y+ programming"
     ],
 
@@ -78,8 +78,8 @@ export const dict = {
     ],
 
     socials: [
-        { text: "Telegram", link: "" },
-        { text: "CodeWars", link: "" },
-        { text: "Medium", link: "" },
+        { text: "Telegram", link: "https://t.me/kekw_k" },
+        { text: "CodeWars", link: "https://www.codewars.com/users/kusainovv" },
+        { text: "Medium", link: "https://medium.com/@kusainovratmir" },
     ]
 }

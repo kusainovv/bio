@@ -1,10 +1,10 @@
 import styled from '@emotion/styled'
 import type { NextPage } from 'next'
 import { Biography } from '../components/blocks/Biography'
-import { Footer } from '../components/blocks/Footer';
 
 const Wrapper = styled.div`
   width: 600px;
+  max-width: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,6 @@ const Wrapper = styled.div`
 const Home: NextPage = () => {
   return <Wrapper>
     <Biography />
-    <Footer />
   </Wrapper>
 }
 
