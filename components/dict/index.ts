@@ -3,7 +3,7 @@ export const dict = {
         about_me: {
             title: 'about_me()',
             description: `
-                Junior+/Middle Front-end developer with a desire to improve, receive new tasks, learn new
+                Front-end developer with a desire to improve, receive new tasks, learn new
                 technologies, apply new approaches and become a developer with experience. My goal as
                 Fronte-end developer is to apply my technical skills, utilize my knowledge, get knowledge
                 from other developers and just do my work by 100%. 
@@ -57,13 +57,6 @@ export const dict = {
         }
     },
 
-    work_experience: [
-        "3+ company",
-        "5+ offers",
-        "1y+ work experience",
-        "2y+ programming"
-    ],
-
     technica_experience: [
         "React, TS, Next.js, Python, Clojure",
         "MATERIAL UI, ANT-DESIGN and other ui libs",
@@ -81,5 +74,6 @@ export const dict = {
         { text: "Telegram", link: "https://t.me/kekw_k" },
         { text: "CodeWars", link: "https://www.codewars.com/users/kusainovv" },
         { text: "Medium", link: "https://medium.com/@kusainovratmir" },
+        { text: "LinkedIn", link: "https://www.linkedin.com/in/%D1%80%D0%B0%D1%82%D0%BC%D0%B8%D1%80-%D0%BA%D1%83%D1%81%D0%B0%D0%B8%D0%BD%D0%BE%D0%B2-b67b5a257" },
     ]
 }

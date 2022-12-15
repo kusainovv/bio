@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import React, { ReactNode } from 'react';
 
 const Wrapper = styled.div`
-    margin: 50px 0;
+    margin: 100px 0;
 `;
 
 const Title = styled.p`
